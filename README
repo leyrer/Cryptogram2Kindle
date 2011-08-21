@@ -4,7 +4,7 @@
 Cryptogram2Kindle is a small script I wrote to send Bruce Schneiers Crypto-Gram
 Newsletter <http://www.schneier.com/crypto-gram.html> to my Kindle for easier
 reading.
-To spare me the hassle to convert the Newsletter to the .mobi format, I am
+To spare me the hassle of converting the Newsletter to the .mobi format, I am
 "reusing" Paolo Bernardi's RSS feed <https://paolobernardi.wordpress.com/feed/>
 where he offers every Cryptogram issue in EPUB and MOBI format.
 So all this humble script does is reading the feed, search for .epub files it
@@ -12,11 +12,12 @@ hasn't found and mail them to the (free) e-mail address of your kindle.
 
 GETTING STARTED
 ===============
-
-1. Copy the script to a directory of your choice, where you have write permissions
-to. 
-2. Modify the neccessary variables in the code. 
-3. Add a line to your crontab, that looks something like this:
+1. On Debian: sudo aptitude install libxml-rss-feed-perl libmime-lite-perl 
+2. Copy the script to a directory of your choice. You need (another) directory, 
+   where you have write permissions so the script can store some data inbetween
+   sessions. 
+3. Modify the neccessary variables in the code. 
+4. Add a line to your crontab, that looks something like this:
     07 11 *   *   *     /usr/bin/perl /home/m3/work/cryptogram2kindle.pl
 
 Enjoy!
